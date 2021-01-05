@@ -1,6 +1,7 @@
 package com.rajrajhans.SpringTodoApp.domain;
 
 import javax.persistence.*;
+import java.util.Objects;
 import java.util.Set;
 
 @Entity                             // Telling Hibernate that this is a entity class
@@ -57,5 +58,18 @@ public class User {
 
     public void setTodos(Set<Todo> todos) {
         this.todos = todos;
+    }
+
+    @Override
+    public boolean equals(Object o) {                               // implementing a custom equals method to make sure
+    if (this == o) return true;                                     // that two objects of class "User" are compared based on their ids
+        if (o == null || getClass() != o.getClass()) return false;  // so that Hibernate and Set will consider two objects with same id as equal
+        User user = (User) o;
+        return user_id == user.user_id;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(user_id);
     }
 }
