@@ -42,9 +42,9 @@ public class Todo {
     }
 
     @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+    public boolean equals(Object o) {                               // implementing a custom equals method to make sure
+    if (this == o) return true;                                     // that two objects of class "User" are compared based on their ids
+        if (o == null || getClass() != o.getClass()) return false;  // so that Hibernate and Set will consider two objects with same id as equal
         Todo todo = (Todo) o;
         return id == todo.id;
     }
