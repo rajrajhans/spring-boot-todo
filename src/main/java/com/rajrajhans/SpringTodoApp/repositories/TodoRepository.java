@@ -1,6 +1,6 @@
 package com.rajrajhans.SpringTodoApp.repositories;
 
-import com.rajrajhans.SpringTodoApp.domain.Todo;
+import com.rajrajhans.SpringTodoApp.domains.Todo;
 import org.springframework.data.repository.CrudRepository;
 
 public interface TodoRepository extends CrudRepository<Todo, Long> {        // Since it is a generic, we are passing the type (Todo) and the ID type (which is long)

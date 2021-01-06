@@ -1,4 +1,4 @@
-package com.rajrajhans.SpringTodoApp.domain;
+package com.rajrajhans.SpringTodoApp.domains;
 
 import javax.persistence.*;
 import java.util.Objects;
@@ -22,10 +22,9 @@ public class User {
     public User() {                 // Doing this because JPA requires a zero arg constructor
     }
 
-    public User(String firstName, String lastName, Set<Todo> todos) {
+    public User(String firstName, String lastName) {
         this.firstName = firstName;
         this.lastName = lastName;
-        this.todos = todos;
     }
 
     public String getFirstName() {
