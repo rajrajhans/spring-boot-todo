@@ -28,7 +28,7 @@ public class TodoService {
         return allTodos;
     }
 
-    public String createTodo(String todo){
+    public String createTodo(String todo) {
         return todo + " created";
     }
 }
