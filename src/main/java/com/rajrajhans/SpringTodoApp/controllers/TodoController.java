@@ -41,4 +41,9 @@ public class TodoController {
         todoService.deleteTodo(id);
     }
 
+    @RequestMapping(method = {RequestMethod.GET}, value = "/todos/user/{user_id}")
+    public List<Todo> getTodosByUser(@PathVariable Long user_id){
+        return todoService.getTodosByUser(user_id);
+    }
+
 }

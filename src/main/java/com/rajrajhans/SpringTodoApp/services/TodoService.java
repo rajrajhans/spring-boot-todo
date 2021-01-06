@@ -42,4 +42,8 @@ public class TodoService {
     public void deleteTodo(Long id){
         todoRepo.delete(getTodo(id));
     }
+
+    public List<Todo> getTodosByUser(Long user_id){
+        return todoRepo.findByAuthorId(user_id);
+    }
 }

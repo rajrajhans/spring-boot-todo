@@ -13,7 +13,6 @@ public class Todo {
     private String task;
 
     @ManyToOne
-    @JoinColumn(name="user_id")
     private User author;
 
     public Todo() {                 // Doing this because JPA requires a zero arg constructor

@@ -29,8 +29,9 @@ public class UserService{
         return res.orElse(null);
     }
 
-    public void addUser(User User){
-        userRepo.save(User);
+    public Long addUser(User User){
+        User newUser = userRepo.save(User);
+        return newUser.getId();
     }
 
     public void updateUser(Long id, User User){

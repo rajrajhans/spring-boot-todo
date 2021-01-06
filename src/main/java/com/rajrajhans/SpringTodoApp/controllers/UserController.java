@@ -3,13 +3,11 @@ package com.rajrajhans.SpringTodoApp.controllers;
 import com.rajrajhans.SpringTodoApp.domains.User;
 import com.rajrajhans.SpringTodoApp.services.UserService;
 import org.springframework.data.web.PageableDefault;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@RestController
 public class UserController {
     private final UserService userService;
 
@@ -23,8 +21,8 @@ public class UserController {
     }
 
     @RequestMapping(method = RequestMethod.POST, value = "/users")
-    public void addUser(@RequestBody User user){
-        userService.addUser(user);
+    public Long addUser(@RequestBody User user){
+        return userService.addUser(user);
     }
 
     @RequestMapping(method = RequestMethod.PUT, value = "/users/{user_id}")
