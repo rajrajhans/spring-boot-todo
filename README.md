@@ -1,7 +1,9 @@
-# Spring Todo
-A simple todo application with the backend as a REST API developed using Spring Boot, and the frontend as a simple React app.
+# SpringTodo
+A simple todo application REST API developed using Spring Boot.
 
 Intended as an exercise to learn Spring Boot.
+
+<b>For more details, please check out [this blog post](https://rajrajhans.com/2021/01/beginners-guide-to-spring-boot/). </b>
 
 ### API Endpoints
 Here is a short summary about the available REST API Endpoints for the functionalities that have been implemented.
@@ -28,5 +30,3 @@ Here is a short summary about the available REST API Endpoints for the functiona
 - Apache Maven
 - MySQL  
 - IDE: IntelliJ Ultimate
-
-### For more details, please check out this blog post. 
