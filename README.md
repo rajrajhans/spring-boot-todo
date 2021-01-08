@@ -1,6 +1,8 @@
 # SpringTodo
 A simple todo application REST API developed using Spring Boot.
 
+Uses Spring Data JPA for CRUD operations on a MySQL database, and Spring Security to implement authentication and authorization. (Currently working on JWT based auth)
+
 Intended as an exercise to learn Spring Boot.
 
 <b>For more details, please check out [this blog post](https://rajrajhans.com/2021/01/beginners-guide-to-spring-boot/). </b>
