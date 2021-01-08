@@ -1,9 +1,8 @@
 package com.rajrajhans.SpringTodoApp.services;
 
-import com.rajrajhans.SpringTodoApp.domains.AuthUserDetails;
-import com.rajrajhans.SpringTodoApp.domains.User;
+import com.rajrajhans.SpringTodoApp.models.AuthUserDetails;
+import com.rajrajhans.SpringTodoApp.models.User;
 import com.rajrajhans.SpringTodoApp.repositories.UserRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;

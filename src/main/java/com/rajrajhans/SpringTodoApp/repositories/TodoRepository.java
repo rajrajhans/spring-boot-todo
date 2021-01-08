@@ -1,6 +1,6 @@
 package com.rajrajhans.SpringTodoApp.repositories;
 
-import com.rajrajhans.SpringTodoApp.domains.Todo;
+import com.rajrajhans.SpringTodoApp.models.Todo;
 import org.springframework.data.repository.CrudRepository;
 import java.util.List;
 

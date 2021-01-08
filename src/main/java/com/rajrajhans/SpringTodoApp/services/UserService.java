@@ -1,6 +1,6 @@
 package com.rajrajhans.SpringTodoApp.services;
 
-import com.rajrajhans.SpringTodoApp.domains.User;
+import com.rajrajhans.SpringTodoApp.models.User;
 import com.rajrajhans.SpringTodoApp.repositories.UserRepository;
 import org.springframework.stereotype.Service;
 

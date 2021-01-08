@@ -1,8 +1,7 @@
 package com.rajrajhans.SpringTodoApp.controllers;
 
-import com.rajrajhans.SpringTodoApp.domains.User;
+import com.rajrajhans.SpringTodoApp.models.User;
 import com.rajrajhans.SpringTodoApp.services.UserService;
-import org.springframework.data.web.PageableDefault;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;

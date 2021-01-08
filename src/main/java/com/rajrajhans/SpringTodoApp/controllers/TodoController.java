@@ -1,6 +1,6 @@
 package com.rajrajhans.SpringTodoApp.controllers;
 
-import com.rajrajhans.SpringTodoApp.domains.Todo;
+import com.rajrajhans.SpringTodoApp.models.Todo;
 import com.rajrajhans.SpringTodoApp.services.TodoService;
 import org.springframework.web.bind.annotation.*;
 

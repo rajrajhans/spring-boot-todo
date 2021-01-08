@@ -1,4 +1,4 @@
-package com.rajrajhans.SpringTodoApp.domains;
+package com.rajrajhans.SpringTodoApp.models;
 
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;

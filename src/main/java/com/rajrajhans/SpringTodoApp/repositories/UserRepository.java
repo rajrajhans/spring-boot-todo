@@ -1,6 +1,6 @@
 package com.rajrajhans.SpringTodoApp.repositories;
 
-import com.rajrajhans.SpringTodoApp.domains.User;
+import com.rajrajhans.SpringTodoApp.models.User;
 import org.springframework.data.repository.CrudRepository;
 
 import java.util.Optional;

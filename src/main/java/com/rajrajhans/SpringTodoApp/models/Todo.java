@@ -1,4 +1,4 @@
-package com.rajrajhans.SpringTodoApp.domains;
+package com.rajrajhans.SpringTodoApp.models;
 
 import javax.persistence.*;
 import java.util.Objects;

@@ -1,6 +1,6 @@
 package com.rajrajhans.SpringTodoApp.services;
 
-import com.rajrajhans.SpringTodoApp.domains.Todo;
+import com.rajrajhans.SpringTodoApp.models.Todo;
 import com.rajrajhans.SpringTodoApp.repositories.TodoRepository;
 import org.springframework.stereotype.Service;
 
