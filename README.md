@@ -31,4 +31,4 @@ Here is a short summary about the available REST API Endpoints for the functiona
 - Spring MVC
 - Apache Maven
 - MySQL  
-- IDE: IntelliJ Ultimate
+- AWS Elastic Beanstalk, EC2 & RDS for deployment
