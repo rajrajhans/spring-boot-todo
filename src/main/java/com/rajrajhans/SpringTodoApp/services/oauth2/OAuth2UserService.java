@@ -47,14 +47,21 @@ public class OAuth2UserService extends DefaultOAuth2UserService {
         Optional<User> userOptional = userRepository.findByUsername(oAuth2UserInfo.getEmail());
         User user;
         if(userOptional.isPresent()) {
+            // We know this username/email
+
             user = userOptional.get();
+
+            // Check if the same guy has signed up with some other Provider previously
             if(!user.getProvider().equals(AuthProvider.valueOf(oAuth2UserRequest.getClientRegistration().getRegistrationId()))) {
                 throw new OAuth2AuthenticationProcessingException("Looks like you're signed up with " +
                         user.getProvider() + " account. Please use your " + user.getProvider() +
                         " account to login.");
             }
+
+            // If not, that means he signed up with his email before, so update his account with oAuth info
             user = updateExistingUser(user, oAuth2UserInfo);
         } else {
+            // Email not found in the database, he is a new user
             user = registerNewUser(oAuth2UserRequest, oAuth2UserInfo);
         }
 
@@ -69,6 +76,9 @@ public class OAuth2UserService extends DefaultOAuth2UserService {
         user.setName(oAuth2UserInfo.getName());
         user.setUsername(oAuth2UserInfo.getEmail());
         user.setImageURL(oAuth2UserInfo.getImageUrl());
+        user.setRole("ROLE_USER");
+        user.setActive(true);
+
         return userRepository.save(user);
     }
 

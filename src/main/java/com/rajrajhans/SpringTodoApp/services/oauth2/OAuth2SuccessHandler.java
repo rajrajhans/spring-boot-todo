@@ -28,7 +28,6 @@ public class OAuth2SuccessHandler extends SimpleUrlAuthenticationSuccessHandler 
                                 .fromUriString(redirectURL)
                                 .queryParam("token", jwtToken)
                                 .build().toUriString();
-        System.out.println(targetURL);
         getRedirectStrategy().sendRedirect(request, response, targetURL);
     }
 
