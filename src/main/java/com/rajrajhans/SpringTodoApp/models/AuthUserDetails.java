@@ -10,10 +10,10 @@ import java.util.stream.Collectors;
 
 public class AuthUserDetails implements OAuth2User, UserDetails {
     private Long id;
-    private String username;
-    private String password;
+    private final String username;
+    private final String password;
     private boolean active;
-    private List<GrantedAuthority> authority;
+    private final List<GrantedAuthority> authority;
     private Map<String, Object> attributes;
 
     public AuthUserDetails(User user){

@@ -14,7 +14,7 @@ import java.io.IOException;
 
 @Component
 public class OAuth2SuccessHandler extends SimpleUrlAuthenticationSuccessHandler {
-    private JwtUtil jwtUtil;
+    private final JwtUtil jwtUtil;
 
     public OAuth2SuccessHandler(JwtUtil jwtUtil) {
         this.jwtUtil = jwtUtil;
