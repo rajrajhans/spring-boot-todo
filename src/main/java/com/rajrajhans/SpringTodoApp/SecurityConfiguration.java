@@ -51,6 +51,9 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
         http
                 .csrf()
                     .disable()
+                .exceptionHandling()
+                    .authenticationEntryPoint(new AuthEntryPoint())
+                    .and()
                 .sessionManagement()
                     .sessionCreationPolicy(SessionCreationPolicy.STATELESS)  // telling spring security to not create a session
                     .and()
@@ -65,7 +68,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .oauth2Login()
                     .userInfoEndpoint()
                     .userService(oAuth2UserService)
-                .and()
+                    .and()
                 .successHandler(oAuth2SuccessHandler)
                 .failureHandler(oAuth2FailureHandler);
         http.addFilterBefore(jwtRequestFilter, UsernamePasswordAuthenticationFilter.class);   // telling spring security to make sure that our jwtreqfilter is called before the username and pwd auth filter is called
