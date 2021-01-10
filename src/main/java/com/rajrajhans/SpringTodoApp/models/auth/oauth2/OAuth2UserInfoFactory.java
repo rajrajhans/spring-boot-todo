@@ -11,6 +11,8 @@ public class OAuth2UserInfoFactory {
             return new GithubOAuth2UserInfo(attributes);
         } else if(regID.equalsIgnoreCase(AuthProvider.google.toString())) {
             return new GoogleOAuth2UserInfo(attributes);
+        }else if (regID.equalsIgnoreCase(AuthProvider.facebook.toString())) {
+            return new FacebookOAuth2UserInfo(attributes);
         }else{
             System.out.println("Returning NULL from oAuthUserInfoFactory");
             return null;
