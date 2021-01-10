@@ -1,7 +1,7 @@
 # SpringTodo
 A simple todo application REST API developed using Spring Boot.
 
-Used Spring Data JPA for CRUD operations on a MySQL database, and Spring Security to implement JWT based authentication and authorization. Learned about implemented OAuth with Github, Facebook, Google & Twitter as providers. Finally, deployed the application using AWS Elastic Beanstalk with EC2 and RDS.  
+Used Spring Data JPA for CRUD operations on a MySQL database, and Spring Security to implement JWT based authentication and authorization. Learned about implemented OAuth with Github, Facebook and Google as providers. Finally, deployed the application using AWS Elastic Beanstalk with EC2 and RDS.  
 
 Intended as an exercise to learn Spring Boot.
 
