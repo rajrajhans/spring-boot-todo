@@ -1,5 +1,7 @@
 package com.rajrajhans.SpringTodoApp.models;
 
+import com.sun.istack.NotNull;
+
 import javax.persistence.*;
 import java.util.Objects;
 import java.util.Set;
@@ -16,10 +18,13 @@ public class User {
     private String role;
     boolean active;
 
+    @NotNull
+    @Enumerated(EnumType.STRING)
+    private AuthProvider provider;
+
     @OneToMany(mappedBy = "author")                     // mappedBy indicates that this side is the inverse
-                                                        // side, and that the mapping is defined by the attribute
+    private Set<Todo> todos;                            // side, and that the mapping is defined by the attribute
                                                         // author at the other side of the association
-    private Set<Todo> todos;
 
     public User() {                 // Doing this because JPA requires a zero arg constructor
     }

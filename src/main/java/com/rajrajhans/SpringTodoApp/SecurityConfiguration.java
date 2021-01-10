@@ -18,7 +18,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
     // Configuring Authentication
     private final UserDetailsService authUserDetailsService;
-    private JwtRequestFilter jwtRequestFilter;
+    private final JwtRequestFilter jwtRequestFilter;
 
     public SecurityConfiguration(UserDetailsService authUserDetailsService, JwtRequestFilter jwtRequestFilter) {
         this.authUserDetailsService = authUserDetailsService;
@@ -46,6 +46,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .antMatchers("/authenticate").permitAll()
                 .antMatchers("/").permitAll()
                 .anyRequest().authenticated()
+                .and().oauth2Login()
                 .and().sessionManagement()
                       .sessionCreationPolicy(SessionCreationPolicy.STATELESS);  // telling spring security to not create a session
         http.addFilterBefore(jwtRequestFilter, UsernamePasswordAuthenticationFilter.class);   // telling spring security to make sure that our jwtreqfilter is called before the username and pwd auth filter is called
