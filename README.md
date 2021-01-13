@@ -1,7 +1,7 @@
 # SpringTodo
 A simple todo application REST API developed using Spring Boot.
 
-Used Spring Data JPA for CRUD operations on a MySQL database, and Spring Security to implement JWT based authentication and authorization. Learned about implemented OAuth with Github, Facebook and Google as providers. Finally, deployed the application using AWS Elastic Beanstalk with EC2 and RDS.  
+Used **Spring Data JPA** for CRUD operations on a **MySQL** database, and **Spring Security** to implement **JWT** based authentication and authorization. Learned about, and implemented implemented **OAuth** with Github, Facebook and Google as providers. Finally, deployed the application using **AWS Elastic Beanstalk** with EC2 and RDS.  
 
 Intended as an exercise to learn Spring Boot.
 
@@ -22,6 +22,10 @@ Here is a short summary about the available REST API Endpoints for the functiona
 |     `POST`    |         `/users`        | Create a new user (user object in Request Body)     |
 |    `DELETE`   |     `/todos/{ id }`     | Delete that todo                                    |
 |    `DELETE`   |     `/users/{ id }`     | Delete that user (and the todos associated with it) |
+|     `POST`    |     `/authenticate`     | Authenticates the user based on `username` and `password` provided in the POST body |
+|     `GET`     |`/oauth2/authorization/github`| Initiate oAuth flow with GitHub as the provider. Returns back JWT associated with the user |
+|     `GET`     |`/oauth2/authorization/google`| Initiate oAuth flow with Google as the provider. Returns back JWT associated with the user |
+|     `GET`     |`/oauth2/authorization/facebook`| Initiate oAuth flow with Facebook as the provider. Returns back JWT associated with the user |
 
 ### Challenges & Learnings
 - **JWT Implementation** - Earlier, I had implemented a JWT based authentication solution in another project using Python Flask. But, using Spring Boot I observed that I had more granular control over several aspects, which the Flask JWT library I had used just abstracted it for me. So I learned more about JWT. 
